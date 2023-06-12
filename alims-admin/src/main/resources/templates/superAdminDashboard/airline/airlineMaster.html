@@ -1,0 +1,142 @@
+<div class="airlineMaster" th:fragment="airlineMaster" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="row">
+        <input id="airline_id" type="hidden">
+        <div class="col-lg-12">
+            <div id="" class="custom-accordion">
+                <div class="card">
+                    <label class="card-label"><i>Airline</i></label>
+                    <div class="p-4 border-top">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="airline_name">Airline Name</label>
+                                    <input id="airline_name" name="airline_name" type="text"
+                                           class="form-control" placeholder="Airline Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="airline_code">Airline Code</label>
+                                    <input id="airline_code" name="airline_code" type="text"
+                                           class="form-control" placeholder="Airline Code">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="airline_contact_1">Airline Contact No:1</label>
+                                    <input id="airline_contact_1" name="airline_contact_1" type="text"
+                                           class="form-control" placeholder="Airline Contact No:1">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="airline_contact_2">Airline Contact No:2</label>
+                                    <input id="airline_contact_2" name="airline_contact_2" type="text"
+                                           class="form-control" placeholder="Airline Contact No:2">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="airline_email">Airline Email</label>
+                                    <input id="airline_email" name="airline_email" type="text"
+                                           class="form-control" placeholder="Airline Email">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="airline_web">Airline Web</label>
+                                    <input id="airline_web" name="airline_web" type="text"
+                                           class="form-control" placeholder="Airline Web">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="contact_person_name">Contact Person</label>
+                                    <input id="contact_person_name" name="contact_person_name" type="text"
+                                           class="form-control" placeholder="Contact Person Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="country">Country</label>
+                                    <input id="country" name="country" type="text"
+                                           class="form-control" placeholder="Country">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label"
+                                           for="airline_status">Status</label>
+                                    <select class="form-select" id="airline_status">
+                                        <option value="NOT_SELECTED">Select a Status</option>
+                                        <option value="ACTIVE">Active</option>
+                                        <option value="INACTIVE">Inactive</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label class="form-label" for="airline_comment">Comment</label>
+                                    <input id="airline_comment" name="airline_comment" type="text"
+                                           class="form-control" placeholder="Comment">
+                                </div>
+                            </div>
+                            <div class="col-lg-10">
+                                <div class="mb-3">
+                                    <label class="form-label" for="airline_address">Address</label>
+                                    <input id="airline_address" name="airline_address" type="text"
+                                           class="form-control" placeholder="Address">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <div class="mb-3">
+                                <div>
+                                    <label class="form-label"
+                                           style="color: white">Keyword</label><br>
+                                    <input class="btn btn-primary btn-flat" id="saveUpdateAirlineBtn"
+                                           type="button" value="Create">
+                                    <input class="btn btn-success btn-flat" id="restAirlineBtn"
+                                           type="button" value="Reset">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="box box-default">
+                        <div class="box-body">
+                            <div>
+                                <div class="table table-bordered table-hover table-responsive display nowrap">
+                                    <table class="table table-hover table-striped" id="airline_master_table">
+                                        <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Code</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end col -->
+    </div> <!-- end row -->
+</div>

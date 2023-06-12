@@ -1,0 +1,78 @@
+<div class="menu" th:fragment="menu" xmlns:th="http://www.w3.org/1999/xhtml">
+    <!-- ========== Left Sidebar Start ========== -->
+    <div class="vertical-menu">
+        <!-- LOGO -->
+        <div class="navbar-brand-box">
+            <a href="index.html" class="logo logo-dark"> <span class="logo-sm">
+					MC
+					</span> <span class="logo-lg" style="font-size: 18px; font-style: italic">
+						Gulfstream Master
+					</span> </a>
+            <a href="index.html" class="logo logo-light"> <span class="logo-sm">
+						<img src="../../systemAdminDashboard/images/logo-sm.png" alt="" height="22">
+					</span> <span class="logo-lg">
+						<img src="../../systemAdminDashboard/images/logo-light.png" alt="" height="20">
+					</span> </a>
+        </div>
+        <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect vertical-menu-btn"><i
+                class="fa fa-fw fa-bars"></i></button>
+        <div data-simplebar class="sidebar-menu-scroll">
+            <!--- Sidemenu -->
+            <div id="sidebar-menu">
+                <!-- Left Menu Start -->
+                <ul class="metismenu list-unstyled" id="side-menu">
+                    <li class="menu-title">MAIN NAVIGATION</li>
+                    <li>
+                        <a href=""> <i class="iconify " data-icon="uil-home-alt"
+                                       data-inline="false"></i>&nbsp;<span
+                                style="font-size: 15px">Dashboard</span> </a>
+                    </li>
+                    <li>
+                        <a href="/airline/airplane"> <i class="iconify" data-icon="uil:folder-open"
+                                                        data-inline="false"></i>&nbsp;<span
+                                class="nav-text" style="font-size: 15px"> Air Planes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/airline/pilot"> <i class="iconify" data-icon="uil:folder-open"
+                                                     data-inline="false"></i>&nbsp;<span
+                                class="nav-text" style="font-size: 15px"> Pilots</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/airline/flightCrew"> <i class="iconify" data-icon="uil:folder-open"
+                                                          data-inline="false"></i>&nbsp;<span
+                                class="nav-text" style="font-size: 15px"> Flight Crew</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0);" class="has-arrow waves-effect"><i class="iconify "
+                                                                                         data-icon="uil:folder-open"
+                                                                                         data-inline="false"></i>&nbsp;<span
+                                class="nav-text" style="font-size: 15px">Settings</span> </a>
+                        <ul class="sub-menu" aria-expanded="false">
+                            <li><a href="/airline/userRole"><i class="iconify "
+                                                               data-icon="ion:checkmark-circle-outline"
+                                                               data-inline="false"></i> User Role</a>
+                            </li>
+                            <li><a href="/airline/user"><i class="iconify "
+                                                           data-icon="ion:checkmark-circle-outline"
+                                                           data-inline="false"></i> User</a>
+                            </li>
+                            <li><a href="/airline/country"><i class="iconify "
+                                                              data-icon="ion:checkmark-circle-outline"
+                                                              data-inline="false"></i> Country</a>
+                            </li>
+                            <li><a href="/airline/arrangeSchedule"><i class="iconify "
+                                                                      data-icon="ion:checkmark-circle-outline"
+                                                                      data-inline="false"></i> Arrange Schedule</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- Sidebar -->
+        </div>
+    </div>
+</div>

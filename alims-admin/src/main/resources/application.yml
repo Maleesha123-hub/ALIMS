@@ -1,0 +1,56 @@
+server:
+  port: 8763
+
+jwt:
+  secret: 7A24432646294A404E635266556A576E5A7234753778214125442A472D4B6150645367566B59703273357638792F423F4528482B4D6251655468576D5A713474
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/dev_core_alims_admin
+    username: root
+    password: 12345
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: core-alims-admin-service
+  jpa:
+    hibernate:
+      ddl-auto: update
+  zipkin:
+    base-url: http://localhost:9411/
+
+## enabling all the web endpoints of actuator
+management:
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
+
+## configure the resilience4j related states
+resilience4j:
+  circuitbreaker:
+    instances:
+      SuperAdminService:
+        registerHealthIndicator: true
+        eventConsumerBufferSize: 10
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowSize: 10
+        slidingWindowType: COUNT_BASED

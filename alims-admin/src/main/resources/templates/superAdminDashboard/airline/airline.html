@@ -1,0 +1,133 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:replace="fragments/head :: head"></div>
+<body>
+<div id="layout-wrapper">
+    <div th:replace="fragments/header :: header"></div>
+    <div th:replace="fragments/left-menu :: menu"></div>
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+        <div class="page-content">
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box d-flex align-items-center justify-content-between">
+                            <h4 class="mb-0">Manage Airlines</h4>
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                                    <li class="breadcrumb-item active">Airline</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-15">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#navtabs-home" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                    <span class="d-none d-sm-block">Airline</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#navtabs-branch" role="tab">
+                                    <span class="d-block d-sm-none"><i class="far fa-branch"></i></span>
+                                    <span class="d-none d-sm-block">Branch</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#navtabs-profile" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-profile"></i></span>
+                                    <span class="d-none d-sm-block">Profiles</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#navtabs-user" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-user"></i></span>
+                                    <span class="d-none d-sm-block">Users</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#navtabs-superUser" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-superUser"></i></span>
+                                    <span class="d-none d-sm-block">Super Users</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#navtabs-auditData" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-auditData"></i></span>
+                                    <span class="d-none d-sm-block">Audit Data</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content p-3 text-muted">
+                            <div class="tab-pane active" id="navtabs-home" role="tabpanel">
+                                <p class="mb-0">
+                                <div th:replace="superAdminDashboard/airline/airlineMaster :: airlineMaster"></div>
+                                </p>
+                            </div>
+                            <div class="tab-pane" id="navtabs-branch" role="tabpanel">
+                                <p class="mb-0">
+                                <div th:replace="superAdminDashboard/airline/airlineBranch :: airlineBranch"></div>
+                                </p>
+                            </div>
+                            <div class="tab-pane" id="navtabs-profile" role="tabpanel">
+                                <p class="mb-0">
+                                <div th:replace="superAdminDashboard/airline/airlineProfile :: airlineProfile"></div>
+                                </p>
+                            </div>
+                            <div class="tab-pane" id="navtabs-user" role="tabpanel">
+                                <p class="mb-0">
+                                <div th:replace="superAdminDashboard/airline/airlineUser :: airlineUser"></div>
+                                </p>
+                            </div>
+                            <div class="tab-pane" id="navtabs-superUser" role="tabpanel">
+                                <p class="mb-0">
+                                <div th:replace="superAdminDashboard/airline/airlineSuperUser :: airlineSuperUser"></div>
+                                </p>
+                            </div>
+                            <div class="tab-pane" id="navtabs-auditData" role="tabpanel">
+                                <p class="mb-0">
+                                <div th:replace="superAdminDashboard/airline/airlineAuditData :: airlineAuditData"></div>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container-fluid -->
+</div>
+<div th:replace="fragments/footer :: footer"></div>
+<!-- End Page-content -->
+</div>
+<!-- end main content-->
+</div>
+<div th:replace="fragments/footer-js :: js"></div>
+<script src="/superAdminDashboard/js/module/common.js"></script>
+<script src="/superAdminDashboard/js/module/airline/airlineMaster.js"></script>
+<script src="/superAdminDashboard/js/module/airline/airlineBranch.js"></script>
+<script src="/superAdminDashboard/js/module/airline/airlineProfile.js"></script>
+<script src="/superAdminDashboard/js/module/airline/airlineUser.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

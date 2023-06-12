@@ -1,0 +1,28 @@
+
+# A service registry is a central repository that keeps track of all the available services in a system.
+# When a service instance is started, it registers itself with the registry, providing metadata
+# about its location, health, and other information.
+server:
+  port: 8761
+
+spring:
+  application:
+    name: discovery-service
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    # By writing this line you are saying to your discovery service app that,
+    # there is no need to register yourself in your discovery service registry.
+    # i know your port number and ip and, I know how to connect with you.
+    # you are here to discover other microservices.
+    register-with-eureka: false
+    # By writing this you are saying discovery service that,
+    # no need fetch any registry from another discovery service.
+    # you are the only one here.
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    server:
+      waitTineInMsWhenSyncEmpty: 0

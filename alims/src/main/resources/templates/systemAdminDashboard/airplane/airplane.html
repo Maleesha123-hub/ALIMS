@@ -1,0 +1,110 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:replace="fragments/systemAdminFragments/head :: head"></div>
+<body>
+<div id="layout-wrapper">
+    <div th:replace="fragments/systemAdminFragments/header :: header"></div>
+    <div th:replace="fragments/systemAdminFragments/left-menu :: menu"></div>
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+        <div class="page-content">
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box d-flex align-items-center justify-content-between">
+                            <h4 class="mb-0">Manage Airplane</h4>
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                                    <li class="breadcrumb-item active">Manage Airplane</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <input id="airplane_id" type="hidden">
+                    <div class="col-lg-12">
+                        <div id="" class="custom-accordion">
+                            <div class="card">
+                                <label class="card-label"><i>Airplanes</i></label>
+                                <div class="p-4 border-top">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="airplane_name">Airplane Name</label>
+                                                <input id="airplane_name" name="airplane_name" type="text"
+                                                       class="form-control" placeholder="Airplane Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label class="form-label"
+                                                       for="airplane_status">Status</label>
+                                                <select class="form-select" id="airplane_status">
+                                                    <option value="NOT_SELECTED">Select a Status</option>
+                                                    <option value="ACTIVE">Active</option>
+                                                    <option value="INACTIVE">Inactive</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="mb-3">
+                                                <div>
+                                                    <label class="form-label"
+                                                           style="color: white">Keyword</label><br>
+                                                    <input class="btn btn-primary btn-flat" id="saveUpdateAirplane"
+                                                           type="button" value="Create">
+                                                    <input class="btn btn-success btn-flat" id="restAirplaneBtn"
+                                                           type="button" value="Reset">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="box box-default">
+                                    <div class="box-body">
+                                        <div>
+                                            <div class="table table-bordered table-hover table-responsive display nowrap">
+                                                <table class="table table-hover table-striped"
+                                                       id="airplane_table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Airplane</th>
+                                                        <th>Status</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+                <!-- end main content-->
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="fragments/systemAdminFragments/footer-js :: js"></div>
+<script src="/systemAdminDashboard/js/module/common.js"></script>
+<script src="/systemAdminDashboard/js/module/systemAdminModule/airplanes/airplane.js"></script>
+</body>
+</html>

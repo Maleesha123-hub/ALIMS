@@ -1,0 +1,218 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:replace="fragments/systemAdminFragments/head :: head"></div>
+<body>
+<div id="layout-wrapper">
+    <div th:replace="fragments/systemAdminFragments/header :: header"></div>
+    <div th:replace="fragments/systemAdminFragments/left-menu :: menu"></div>
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+        <div class="page-content">
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box d-flex align-items-center justify-content-between">
+                            <h4 class="mb-0">Manage Pilot</h4>
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                                    <li class="breadcrumb-item active">Manage Pilot</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <input id="pilot_id" type="hidden">
+                    <div class="col-lg-12">
+                        <div id="" class="custom-accordion">
+                            <div class="card">
+                                <label class="card-label"><i>Pilots</i></label>
+                                <div class="p-4 border-top">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="initials">Initials</label>
+                                                <input id="initials" name="initials" type="text"
+                                                       class="form-control" placeholder="Enter Initials">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="first_name">First Name</label>
+                                                <input id="first_name" name="first_name" type="text"
+                                                       class="form-control" placeholder="Enter First Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="last_name">Last Name</label>
+                                                <input id="last_name" name="last_name" type="text"
+                                                       class="form-control" placeholder="Enter Last Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="full_name">Full Name</label>
+                                                <input id="full_name" name="full_name" type="text"
+                                                       class="form-control" placeholder="Enter Full Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="nic">NIC</label>
+                                                <input id="nic" name="nic" type="text"
+                                                       class="form-control" placeholder="Enter NIC Number">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="emergency_contact_no">Emergency Contact
+                                                    No</label>
+                                                <input id="emergency_contact_no" name="emergency_contact_no" type="text"
+                                                       class="form-control" placeholder="Emergency Contact No">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="email">Email</label>
+                                                <input id="email" name="email" type="text"
+                                                       class="form-control" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="mandatory-field">Date of Birth</label>
+                                                <input class="form-control" id="dob" type="date">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="religion">Religion</label>
+                                                <select class="form-select" id="religion">
+                                                    <option value="NOT_SELECTED">Select a Religion</option>
+                                                    <option value="BUDDHIST">Buddhist</option>
+                                                    <option value="HINDU">Hindu</option>
+                                                    <option value="ROMAN_CATHOLIC">Roman Catholic</option>
+                                                    <option value="CHRISTIAN">Christian</option>
+                                                    <option value="MUSLIM">Muslim</option>
+                                                    <option value="R_CATHOLIC_TAMIL">R.Catholic(Tamil)</option>
+                                                    <option value="R_CATHOLIC_BURGHER">R.Catholic(Burgher)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="mandatory-field">Gender</label><br>
+                                                <input id="male" name="gender" type="radio" value="MALE"> Male
+                                                <input id="female" name="gender" type="radio" value="FEMALE"> Female
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="race">Race</label>
+                                                <select class="form-select" id="race">
+                                                    <option value="NOT_SELECTED">Select a Race</option>
+                                                    <option value="SRI_LANKAN">Sri Lankan</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="pilot_user">User</label>
+                                                <select class="form-select" id="pilot_user"
+                                                        onchange="">
+                                                    <option value="NOT_SELECTED">Select a User</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label for="pilot_reg_date" class="form-label">Date of
+                                                    Registration</label>
+                                                <div class="col-md-12">
+                                                    <input class="form-control" type="date"
+                                                           id="pilot_reg_date" placeholder="Date of Registration">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="pilot_status">Status</label>
+                                                <select class="form-select" id="pilot_status">
+                                                    <option value="NOT_SELECTED">Select a Status</option>
+                                                    <option value="ACTIVE">Active</option>
+                                                    <option value="INACTIVE">Inactive</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="mandatory-field">Address</label>
+                                                <textarea class="form-control" cols="5" id="address"
+                                                          placeholder="Address"
+                                                          rows="4"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="mb-3">
+                                                <div>
+                                                    <label class="form-label"
+                                                           style="color: white">Keyword</label><br>
+                                                    <input class="btn btn-primary btn-flat" id="saveUpdatePilotBtn"
+                                                           type="button" value="Create">
+                                                    <input class="btn btn-success btn-flat" id="restPilotBtn"
+                                                           type="button" value="Reset">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="box box-default">
+                                    <div class="box-body">
+                                        <div>
+                                            <div class="table table-bordered table-hover table-responsive display nowrap">
+                                                <table class="table table-hover table-striped"
+                                                       id="pilot_table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <th>Gender</th>
+                                                        <th>Emergency Contact</th>
+                                                        <th>Status</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+                <!-- end main content-->
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="fragments/systemAdminFragments/footer-js :: js"></div>
+<script src="/systemAdminDashboard/js/module/common.js"></script>
+<script src="/systemAdminDashboard/js/module/systemAdminModule/pilot/pilot.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<div class="airlineUser" th:fragment="airlineUser" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="" class="custom-accordion">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="mb-3">
+                            <label class="form-label"
+                                   for="airline_profile_id">Airline Profile</label>
+                            <select class="form-select" id="airline_profile_id" onchange="getSystemAdminByProfile(); getAllUsersByProfileFromAirlineSystem()">
+                                <option value="NOT_SELECTED">Select an Airline Profile
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="mb-3">
+                            <div>
+                                <label class="form-label" for="airline_user_sync_btn"
+                                       style="color: white">Keyword</label><br>
+                                <input class="btn btn-success btn-flat" id="airline_user_sync_btn"
+                                       type="button" value="SYNC SYSTEM ADMIN DATA" onclick="syncAdminData()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <label class="card-label"><i>System Admin Data</i></label>
+                    <div class="p-4 border-top">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="system_admin_user_name">User Name</label>
+                                    <input id="system_admin_user_name" name="system_admin_user_name" type="text"
+                                           class="form-control" placeholder="" readonly>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="system_admin_role_name">User Role</label>
+                                    <input id="system_admin_role_name" name="system_admin_role_name" type="text"
+                                           class="form-control" placeholder="" readonly>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="system_admin_user_status">User Status</label>
+                                    <input id="system_admin_user_status" name="system_admin_user_status" type="text"
+                                           class="form-control" placeholder="" readonly>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="system_admin_role_status">Role Status</label>
+                                    <input id="system_admin_role_status" name="system_admin_role_status" type="text"
+                                           class="form-control" placeholder="" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="box box-default">
+                        <div class="box-body">
+                            <div>
+                                <div class="table table-bordered table-hover table-responsive display nowrap">
+                                    <table class="table table-hover table-striped" id="airline_user_table">
+                                        <thead>
+                                        <tr>
+                                            <th>User Name</th>
+                                            <th>User Role</th>
+                                            <th>Created On</th>
+                                            <th>Updated On</th>
+                                            <th>Last Access</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end col -->
+    </div> <!-- end row -->
+</div>

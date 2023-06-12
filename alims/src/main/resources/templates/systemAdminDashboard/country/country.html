@@ -1,0 +1,87 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:replace="fragments/systemAdminFragments/head :: head"></div>
+<body>
+<div id="layout-wrapper">
+    <div th:replace="fragments/systemAdminFragments/header :: header"></div>
+    <div th:replace="fragments/systemAdminFragments/left-menu :: menu"></div>
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+        <div class="page-content">
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box d-flex align-items-center justify-content-between">
+                            <h4 class="mb-0">Manage Countries</h4>
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                                    <li class="breadcrumb-item active">Country</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-15">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#navtabs-home" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                    <span class="d-none d-sm-block">Country</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#navtabs-airport" role="tab">
+                                    <span class="d-block d-sm-none"><i class="far fa-branch"></i></span>
+                                    <span class="d-none d-sm-block">Airport</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content p-3 text-muted">
+                            <div class="tab-pane active" id="navtabs-home" role="tabpanel">
+                                <p class="mb-0">
+                                <div th:replace="systemAdminDashboard/country/countryMaster :: countryMaster"></div>
+                                </p>
+                            </div>
+                            <div class="tab-pane" id="navtabs-airport" role="tabpanel">
+                                <p class="mb-0">
+                                <div th:replace="systemAdminDashboard/country/countryAirport :: countryAirport"></div>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container-fluid -->
+</div>
+<div th:replace="fragments/systemAdminFragments/footer :: footer"></div>
+<!-- End Page-content -->
+</div>
+<!-- end main content-->
+</div>
+<div th:replace="fragments/systemAdminFragments/footer-js :: js"></div>
+<script src="/systemAdminDashboard/js/module/common.js"></script>
+<script src="/systemAdminDashboard/js/module/systemAdminModule/settings/countryMaster.js"></script>
+<script src="/systemAdminDashboard/js/module/systemAdminModule/settings/countryAirport.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

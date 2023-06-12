@@ -1,0 +1,176 @@
+<div class="airlineBranch" th:fragment="airlineBranch" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="row">
+        <input id="branch_id" type="hidden">
+        <div class="col-lg-12">
+            <div id="" class="custom-accordion">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="mb-3">
+                            <label class="form-label"
+                                   for="airline_id_branch">Airline</label>
+                            <select class="form-select" id="airline_id_branch" onchange="getAirlineById()">
+                                <option value="NOT_SELECTED">Select an Airline
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="mb-3">
+                            <label class="form-label" for="airline_code_branch">Airline Code</label>
+                            <input id="airline_code_branch" name="airline_code_branch" type="text"
+                                   class="form-control" placeholder="Airline Code" disabled>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <label class="card-label"><i>Branch</i></label>
+                    <div class="p-4 border-top">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="branch_name">Branch Name</label>
+                                    <input id="branch_name" name="branch_name" type="text"
+                                           class="form-control" placeholder="Branch Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="branch_code">Branch Code</label>
+                                    <input id="branch_code" name="branch_code" type="text"
+                                           class="form-control" placeholder="Branch Code">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="branch_contact_1">Branch Contact No:1</label>
+                                    <input id="branch_contact_1" name="branch_contact_1" type="text"
+                                           class="form-control" placeholder="Branch Contact No:1">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="branch_contact_2">Branch Contact No:2</label>
+                                    <input id="branch_contact_2" name="branch_contact_2" type="text"
+                                           class="form-control" placeholder="Branch Contact No:2">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="branch_email">Branch Email</label>
+                                    <input id="branch_email" name="branch_email" type="text"
+                                           class="form-control" placeholder="Branch Email">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="branch_web">Branch Web</label>
+                                    <input id="branch_web" name="branch_web" type="text"
+                                           class="form-control" placeholder="Branch Web">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="branch_contact_person_name">Contact Person</label>
+                                    <input id="branch_contact_person_name" name="branch_contact_person_name" type="text"
+                                           class="form-control" placeholder="Contact Person Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="branch_country">Country</label>
+                                    <input id="branch_country" name="branch_country" type="text"
+                                           class="form-control" placeholder="Country">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label"
+                                           for="branch_type">Type</label>
+                                    <select class="form-select" id="branch_type">
+                                        <option value="NOT_SELECTED">Select a Type</option>
+                                        <option value="Full-Service Airlines">Full-Service Airlines</option>
+                                        <option value="Low-Cost Carriers (LCCs)">Low-Cost Carriers (LCCs)</option>
+                                        <option value="Regional Airlines">Regional Airlines</option>
+                                        <option value="Charter Airlines">SCharter Airlines</option>
+                                        <option value="Cargo Airlines">Cargo Airlines</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label"
+                                           for="branch_status">Status</label>
+                                    <select class="form-select" id="branch_status">
+                                        <option value="NOT_SELECTED">Select a Status</option>
+                                        <option value="ACTIVE">Active</option>
+                                        <option value="INACTIVE">Inactive</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label class="form-label" for="branch_comment">Comment</label>
+                                    <input id="branch_comment" name="branch_comment" type="text"
+                                           class="form-control" placeholder="Comment">
+                                </div>
+                            </div>
+                            <div class="col-lg-10">
+                                <div class="mb-3">
+                                    <label class="form-label" for="branch_address">Address</label>
+                                    <input id="branch_address" name="branch_address" type="text"
+                                           class="form-control" placeholder="Address">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <div class="mb-3">
+                                <div>
+                                    <label class="form-label"
+                                           style="color: white">Keyword</label><br>
+                                    <input class="btn btn-primary btn-flat" id="saveUpdateBranchBtn"
+                                           type="button" value="Create">
+                                    <input class="btn btn-success btn-flat" id="restBranchBtn"
+                                           type="button" value="Reset">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="box box-default">
+                        <div class="box-body">
+                            <div>
+                                <div class="table table-bordered table-hover table-responsive display nowrap">
+                                    <table class="table table-hover table-striped" id="airline_branch_table">
+                                        <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Code</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end col -->
+    </div> <!-- end row -->
+</div>

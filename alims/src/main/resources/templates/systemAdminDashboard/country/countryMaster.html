@@ -1,0 +1,78 @@
+<div class="countryMaster" th:fragment="countryMaster" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="row">
+        <input id="country_id" type="hidden">
+        <div class="col-lg-12">
+            <div id="" class="custom-accordion">
+                <div class="card">
+                    <label class="card-label"><i>Country</i></label>
+                    <div class="p-4 border-top">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="country_name">Country Name</label>
+                                    <input id="country_name" name="country_name" type="text"
+                                           class="form-control" placeholder="Country Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label"
+                                           for="country_status">Status</label>
+                                    <select class="form-select" id="country_status">
+                                        <option value="NOT_SELECTED">Select a Status</option>
+                                        <option value="ACTIVE">Active</option>
+                                        <option value="INACTIVE">Inactive</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <div class="mb-3">
+                                <div>
+                                    <label class="form-label"
+                                           style="color: white">Keyword</label><br>
+                                    <input class="btn btn-primary btn-flat" id="saveUpdateCountryBtn"
+                                           type="button" value="Create">
+                                    <input class="btn btn-success btn-flat" id="restCountryBtn"
+                                           type="button" value="Reset">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="box box-default">
+                        <div class="box-body">
+                            <div>
+                                <div class="table table-bordered table-hover table-responsive display nowrap">
+                                    <table class="table table-hover table-striped" id="country_master_table">
+                                        <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end col -->
+    </div> <!-- end row -->
+</div>

@@ -1,0 +1,31 @@
+<div class="header" th:fragment="header" xmlns:th="http://www.w3.org/1999/xhtml">
+    <header id="page-topbar">
+        <div class="navbar-header">
+            <div class="d-flex">
+                <!-- LOGO -->
+                <button type="button"
+                        class="btn btn-sm px-3 font-size-16 header-item waves-effect vertical-menu-btn"><i
+                        class="fa fa-fw fa-bars"></i></button>
+            </div>
+            <div class="d-flex">
+                <div class="dropdown d-inline-block">
+                    <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
+                            class="rounded-circle header-profile-user" img src="../superAdminLoginDashboard/img/login-logo.png"
+                            alt="Header Avatar"> <span
+                            class="d-none d-xl-inline-block ms-1 fw-medium font-size-15">ALIMS_ADMIN</span> <i
+                            class="uil-angle-down d-none d-xl-inline-block font-size-15"></i></button>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" onclick=""><i
+                                class="uil uil-sign-out-alt font-size-18 align-middle me-1 text-muted"></i> <span
+                                class="align-middle">Sign out</span></a>
+                    </div>
+                </div>
+                <div class="dropdown d-inline-block">
+                    <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect"><i
+                            class="uil-cog"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>

@@ -1,0 +1,199 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:replace="fragments/systemAdminFragments/head :: head"></div>
+<body>
+<div id="layout-wrapper">
+    <div th:replace="fragments/systemAdminFragments/header :: header"></div>
+    <div th:replace="fragments/systemAdminFragments/left-menu :: menu"></div>
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+        <div class="page-content">
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box d-flex align-items-center justify-content-between">
+                            <h4 class="mb-0">Arrange Schedule</h4>
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                                    <li class="breadcrumb-item active">Arrange Schedule</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <input id="schedule_id" type="hidden">
+                    <div class="col-lg-12">
+                        <div id="" class="custom-accordion">
+                            <div class="card">
+                                <div class="p-4 border-top">
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <div class="mb-3">
+                                                <label class="form-label"
+                                                       for="airplane">Select an Airplane</label>
+                                                <select class="form-select" id="airplane">
+                                                    <option value="NOT_SELECTED">Select an Airplane</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <label class="card-label"><i>Pilots</i></label>
+                                <div class="p-4 border-top">
+                                    <div class="row" id="pilot_div">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <label class="card-label"><i>Flight Crew Members</i></label>
+                                <div class="p-4 border-top">
+                                    <div class="row" id="crew_div">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <label class="card-label"><i>Destinations</i></label>
+                                <div class="p-4 border-top">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="schedule_name">Schedule Name</label>
+                                                <input id="schedule_name" name="schedule_name" type="text"
+                                                       class="form-control" placeholder="Enter Schedule Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="departure_date">Departure Date</label>
+                                                <input id="departure_date" name="departure_date" type="date"
+                                                       class="form-control" placeholder="Departure date">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="arrival_date">Arrival Date</label>
+                                                <input id="arrival_date" name="arrival_date" type="date"
+                                                       class="form-control" placeholder="Arrival date">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="departure_time">Departure Time</label>
+                                                <input id="departure_time" name="departure_time" type="time"
+                                                       class="form-control" placeholder="Departure time">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="arrival_time">Arrival Time</label>
+                                                <input id="arrival_time" name="arrival_time" type="time"
+                                                       class="form-control" placeholder="Arrival time">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label class="form-label"
+                                                       for="country">Select a Country</label>
+                                                <select class="form-select" id="country">
+                                                    <option value="NOT_SELECTED">Select a Country</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label class="form-label"
+                                                       for="start_point">Starting Point</label>
+                                                <select class="form-select" id="start_point">
+                                                    <option value="NOT_SELECTED">Select a Starting Point</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label class="form-label"
+                                                       for="landing_point">Landing Point</label>
+                                                <select class="form-select" id="landing_point">
+                                                    <option value="NOT_SELECTED">Select a Landing Point</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="mb-3">
+                                                <label class="form-label"
+                                                       for="schedule_status">Status</label>
+                                                <select class="form-select" id="schedule_status">
+                                                    <option value="NOT_SELECTED">Select a Status</option>
+                                                    <option value="ACTIVE">Active</option>
+                                                    <option value="INACTIVE">Inactive</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="mb-3">
+                                                <div>
+                                                    <label class="form-label"
+                                                           style="color: white">Keyword</label><br>
+                                                    <input class="btn btn-primary btn-flat" id="saveUpdateSchedule"
+                                                           type="button" value="Create">
+                                                    <input class="btn btn-success btn-flat" id="restScheduleBtn"
+                                                           type="button" value="Reset">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="box box-default">
+                                    <div class="box-body">
+                                        <div>
+                                            <div class="table table-bordered table-hover table-responsive display nowrap">
+                                                <table class="table table-hover table-striped"
+                                                       id="schedule_table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Country</th>
+                                                        <th>Date Of Flight</th>
+                                                        <th>Departure Time</th>
+                                                        <th>Arrival Time</th>
+                                                        <th>Status</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+                <!-- end main content-->
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="fragments/systemAdminFragments/footer-js :: js"></div>
+<script src="/systemAdminDashboard/js/module/common.js"></script>
+<script src="/systemAdminDashboard/js/module/systemAdminModule/settings/arrangeSchedule.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<div class="airlineProfile" th:fragment="airlineProfile" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="row">
+        <input id="profile_id" type="hidden">
+        <div class="col-lg-12">
+            <div id="" class="custom-accordion">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="mb-3">
+                            <label class="form-label"
+                                   for="financial_year_id">Financial Year</label>
+                            <select class="form-select" id="financial_year_id">
+                                <option value="NOT_SELECTED">Select a Financial Year
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="mb-3">
+                            <label class="form-label"
+                                   for="airline_branch_id">Branch</label>
+                            <select class="form-select" id="airline_branch_id">
+                                <option value="NOT_SELECTED">Select an Airline Branch
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="mb-3">
+                            <label class="form-label" for="airline_profile_master_search">Keyword</label>
+                            <input id="airline_profile_master_search" name="airline_profile_master_search" type="text"
+                                   class="form-control"
+                                   placeholder="Search by Text">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="mb-3">
+                            <div>
+                                <label class="form-label" for="airline_profile_master_search_btn"
+                                       style="color: white">Keyword</label><br>
+                                <input class="btn btn-primary btn-flat" id="airline_profile_master_search_btn"
+                                       type="button" value="Search">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <label class="card-label"><i>Airline Profile</i></label>
+                    <div class="p-4 border-top">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label"
+                                           for="airline_profile_system_admin">Airline System Admin</label>
+                                    <select class="form-select" id="airline_profile_system_admin">
+                                        <option value="NOT_SELECTED">Select a System Admin
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label" for="airline_profile_name">Airline Profile Name</label>
+                                    <input id="airline_profile_name" name="airline_profile_name" type="text"
+                                           class="form-control" placeholder="Airline Profile Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3">
+                                    <label class="form-label"
+                                           for="airline_profile_status">Status</label>
+                                    <select class="form-select" id="airline_profile_status">
+                                        <option value="NOT_SELECTED">Select a Status</option>
+                                        <option value="ACTIVE">Active</option>
+                                        <option value="INACTIVE">Inactive</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <div class="mb-3">
+                                <div>
+                                    <label class="form-label"
+                                           style="color: white">Keyword</label><br>
+                                    <input class="btn btn-primary btn-flat" id="saveUpdateProfileBtn"
+                                           type="button" value="Create">
+                                    <input class="btn btn-success btn-flat" id="restProfileBtn"
+                                           type="button" value="Reset">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="box box-default">
+                        <div class="box-body">
+                            <div>
+                                <div class="table table-bordered table-hover table-responsive display nowrap">
+                                    <table class="table table-hover table-striped" id="airline_profile_table">
+                                        <thead>
+                                        <tr>
+                                            <th>Financial Year</th>
+                                            <th>Airline</th>
+                                            <th>Profile Name</th>
+                                            <th>System Admin</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end col -->
+    </div> <!-- end row -->
+</div>
